@@ -1,0 +1,105 @@
+.errorPage-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .errorPage-father-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+  }
+  
+  .errorPage-iframe-div {
+    width: 30%;
+  }
+  
+  .errorPage404-iframe {
+    border: 0;
+    width: 100%;
+  }
+  
+  .errorPage-content-div {
+    width: 70%;
+  }
+  
+  .errorPage-title-styling {
+    font-size: var(--fs-h2);
+  }
+  
+  .errorPage-p-styling {
+    font-size: var(--fs-body);
+  }
+  
+  .errorPage-button-div {
+    margin-top: 20px; 
+    width: 30%;
+  }
+
+  @media screen and (min-width: 769px) and (max-width: 1200px) {
+    .errorPage-father-div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%; 
+      }
+      
+      .errorPage-iframe-div {
+        width: 30%;
+      }
+      
+      .errorPage-content-div {
+        width: 70%;
+      }
+
+      .errorPage-title-styling {
+        font-size: var(--fs-h2);
+        text-align: center;
+      }
+      
+      .errorPage-p-styling {
+        text-align: center;
+        font-size: var(--fs-body);
+      }
+
+      .errorPage-button-div {
+        margin-top: 20px; 
+        width: 30%;
+      }
+  }
+
+  @media screen and (max-width: 768px) {
+    .errorPage-father-div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%; 
+      }
+      
+      .errorPage-iframe-div {
+        width: 30%;
+      }
+      
+      .errorPage-content-div {
+        width: 70%;
+      }
+
+      .errorPage-title-styling {
+        font-size: var(--fs-h2);
+        text-align: center;
+      }
+      
+      .errorPage-p-styling {
+        font-size: var(--fs-body);
+      }
+
+      .errorPage-button-div {
+        margin-top: 20px; 
+        width: 40%;
+      }
+ }

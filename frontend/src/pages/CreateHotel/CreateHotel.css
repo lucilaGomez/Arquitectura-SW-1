@@ -1,0 +1,113 @@
+.createHotel-father {
+    width: 100%;
+  }
+  
+  .createHotel-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+  }
+  
+  .createHotel-firstForm,
+  .createHotel-secondForm {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .createHotel-firstForm-div {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .hotel-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--fs-h3);
+    margin: 16px 0 0 0;
+  }
+  
+  .createHotel-messagetext {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--fs-small);
+  }
+  
+  .createHotel-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .createHotel-buttons Button,
+  .createHotel-updateAvailability Button {
+    width: 200px; /* Ajusta el tamaño según sea necesario */
+  }
+  
+  .createHotel-updateAvailability {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 16px;
+  }
+  
+  
+/*.createHotel-father{
+    width: 100%;
+}
+
+.createHotel-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+}
+
+.createHotel-firstForm{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.createHotel-secondForm{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.createHotel-firstForm-div{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.createHotel-firstForm,
+.createHotel-secondForm {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.hotel-title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--fs-h3);
+    margin: 16px 0 0 0;
+}
+
+.createHotel-messagetext{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--fs-small);
+}
+*/

@@ -1,0 +1,40 @@
+.user-reservation-wrapper {
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.user-reservation-wrapper h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.user-reservation-wrapper .reservation-item {
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+}
+
+.userReservation-div{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.userReservation-root{
+    display: flex !important;
+}
+
+.userReservation-p{
+    font-size: var(--fs-small);
+}
+
+.userReservation-buttons{
+    display: flex;
+    margin-left: auto;
+}
+
+.userReservation-buttonDiv{
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}

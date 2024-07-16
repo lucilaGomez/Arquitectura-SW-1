@@ -1,0 +1,72 @@
+.createAmenity-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+    font-size: var(--fs-h3);
+}
+
+.createAmenity-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 16px; /* Agregado para espacio adicional debajo */
+}
+
+/* Estilos para la lista de amenities si es necesario */
+.amenity-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+    max-width: 400px; /* Ajusta el ancho máximo según tu diseño */
+}
+
+.amenity-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.amenity-item-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.delete-button {
+    background-color: #ff4d4f; /* Rojo */
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.delete-button:hover {
+    background-color: #d93636; /* Rojo más oscuro al hacer hover */
+}
+
+
+
+
+/*.createAmenitie-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px
+}
+
+.createAmenity-title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+    font-size: var(--fs-h3);
+}*/
