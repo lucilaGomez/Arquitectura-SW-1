@@ -59,5 +59,6 @@ func DeletePhoto(id string) error {
 	if err := initializers.DB.Delete(&photo).Error; err != nil {
 		return err
 	}
+
 	return nil
 }

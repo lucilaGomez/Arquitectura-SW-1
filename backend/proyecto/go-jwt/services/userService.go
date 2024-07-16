@@ -9,6 +9,7 @@ import (
 	"proyecto/dtos"
 	"proyecto/initializers"
 	"proyecto/models"
+	"regexp"
 	"time"
 
 	"github.com/gin-gonic/gin"
@@ -28,16 +29,29 @@ func SignUp(c *gin.Context) {
 		return
 	}
 
-	if body.Email == "" || body.Password == "" || body.Role == "" {
-		c.JSON(http.StatusBadRequest, gin.H{"error": "All fields are required"})
+	// Validar el formato del email utilizando una expresión regular
+	emailRegex := regexp.MustCompile(`^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$`)
+	if !emailRegex.MatchString(body.Email) {
+		c.JSON(http.StatusBadRequest, gin.H{"error": "Invalid email format"})
 		return
 	}
 
-	if body.Role != "admin" && body.Role != "user" {
-		c.JSON(http.StatusBadRequest, gin.H{"error": "Invalid role"})
+	// Verificar si el email ya está registrado en la base de datos
+	var existingUser models.User
+	if err := initializers.DB.First(&existingUser, "email = ?", body.Email).Error; err == nil {
+		c.JSON(http.StatusBadRequest, gin.H{"error": "Email already exists"})
 		return
 	}
 
+	// Validar la longitud mínima del password
+	if len(body.Password) < 8 {
+		c.JSON(http.StatusBadRequest, gin.H{"error": "Password must be at least 8 characters long"})
+		return
+	}
+
+	// Otras validaciones de complejidad del password pueden ir aquí
+
+	// Hash del password antes de guardarlo en la base de datos
 	hash, err := bcrypt.GenerateFromPassword([]byte(body.Password), 10)
 	if err != nil {
 		c.JSON(http.StatusBadRequest, gin.H{"error": "Failed to hash password", "details": err.Error()})

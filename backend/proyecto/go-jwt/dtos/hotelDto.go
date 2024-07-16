@@ -1,7 +1,6 @@
 package dtos
 
 type HotelDto struct {
-	//Id          int      `gorm:"primaryKey"`
 	Name        string   `json:"name" binding:"required"`
 	Description string   `json:"description"`
 	Address     string   `json:"address" binding:"required"`

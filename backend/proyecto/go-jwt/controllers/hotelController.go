@@ -125,11 +125,17 @@ func UpdateHotel(c *gin.Context) {
 		return
 	}
 
-	c.JSON(http.StatusOK, hotel)
+	c.JSON(http.StatusOK, hotel) // Devuelve el hotel actualizado correctamente
 }
 
 func DeleteHotel(c *gin.Context) {
-	id, _ := strconv.Atoi(c.Param("id"))
+	idStr := c.Param("id")
+	id, err := strconv.Atoi(idStr)
+	if err != nil {
+		c.JSON(http.StatusBadRequest, gin.H{"error": "Invalid hotel ID"})
+		return
+	}
+
 	if err := services.DeleteHotel(id); err != nil {
 		c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to delete hotel"})
 		return

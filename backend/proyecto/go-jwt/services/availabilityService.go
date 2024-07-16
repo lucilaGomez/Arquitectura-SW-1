@@ -17,8 +17,8 @@ func GetAvailability(hotelID string, startDate, endDate time.Time) ([]models.Ava
 }
 
 func CreateInitialAvailability(dto *dtos.InitialAvailabilityDto) error {
-	startDate := time.Date(2004, 1, 1, 0, 0, 0, 0, time.UTC)
-	endDate := time.Date(2030, 12, 31, 0, 0, 0, 0, time.UTC)
+	startDate := time.Date(2024, 1, 1, 0, 0, 0, 0, time.UTC)
+	endDate := time.Date(2025, 12, 31, 0, 0, 0, 0, time.UTC)
 
 	for d := startDate; !d.After(endDate); d = d.AddDate(0, 0, 1) {
 		availability := models.Availability{
@@ -52,7 +52,7 @@ func UpdateAvailability(dto *dtos.UpdateAvailabilityDto) error {
 	}
 
 	for _, availability := range availabilities {
-		availability.Available -= dto.Quantity
+		availability.Available = dto.Quantity
 		if err := initializers.DB.Save(&availability).Error; err != nil {
 			return err
 		}

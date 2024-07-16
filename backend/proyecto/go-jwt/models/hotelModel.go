@@ -5,7 +5,6 @@ import "gorm.io/gorm"
 
 type Hotel struct {
 	gorm.Model
-	//Id          int       `gorm:"primaryKey"`
 	Name        string    `json:"name" binding:"required"`
 	Description string    `json:"description"`
 	Address     string    `json:"address" binding:"required"`
