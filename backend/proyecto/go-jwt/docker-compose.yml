@@ -18,7 +18,8 @@ services:
       retries: 10
 
   backend:
-    build: ./mvc-proyecto-arq-sw
+    build: ./mvc-proyecto-arq-sw 
+    # ver bien los nombres, por eso no lo encuentra
     depends_on:
       mysql:
         condition: service_healthy
